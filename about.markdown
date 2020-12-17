@@ -1,18 +1,19 @@
 ---
-layout: page
 title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## Roland Itaru Thompson
+I am a software engineer based in Brisbane, Australia. I am currently working on 
+a speech recognition project for a Japanese company called [Ernie](https://ernie.co.jp/en/).
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+After graduating from the University of Queensland with a Bachelor of Mechatronic
+Engineering in 2018, I have been working predominantly in the field of machine 
+learning, DevOps and MLOps. 
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+I am currently studying Masters of Data Science at the University of Queensland. 
 
-
-[jekyll-organization]: https://github.com/jekyll
+Feel free to connect at the following platforms:
+- [LinkedIn](https://www.linkedin.com/in/roland-thompson-404b24148/)
+- [Twitter](https://twitter.com/rolzy4)
+- [GitHub](https://github.com/rolzy)
