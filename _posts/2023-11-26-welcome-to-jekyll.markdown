@@ -1,29 +1,24 @@
 ---
-layout: post
-title:  "Welcome to Jekyll!"
+title:  "Caching Docker images in Github Actions"
 date:   2023-11-26 08:00:23 +1000
 categories: jekyll update
+comments: true
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+Coming soon...
 
-`YEAR-MONTH-DAY-title.MARKUP`
-
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+<!---
+- Introduction
+    - Github actions
+    - Building docker images
+    - "Docker has a nice feature where it will cache your progress when building..."
+    - Won't it be nice if you could do that in Github Actions, too?
+- Caching images with buildx
+    - What is buildx? 
+    - How it works
+- How to use
+    - Building the image
+    - .github actions language
+    - Example repo
+- Conclusion
+-->

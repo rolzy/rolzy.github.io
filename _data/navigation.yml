@@ -1,0 +1,5 @@
+# main links
+main:
+  - title: "About"
+    description: "About Me"
+    url: /about/
