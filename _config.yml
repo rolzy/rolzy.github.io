@@ -123,6 +123,11 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
 
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-C50BW12YNS"
+    anonymize_ip: false
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
