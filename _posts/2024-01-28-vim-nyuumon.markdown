@@ -40,6 +40,7 @@ UI/UXのユの字もありません。
 
 そんな大人気なVimなので、ぜひ使えるようになりましょう!
 
+### Vimをインストールしてみよう
 {% capture notice-text1 %}
 IDEからVimモードを使う場合は、エクステンションをインストールしてあげてください。
 有名なIDEのVimエクステンションを張っておきます: 
@@ -50,7 +51,7 @@ IDEからVimモードを使う場合は、エクステンションをインス�
 {% endcapture %}
 
 <div class="notice--info">
-  <h4 class="no_toc">エクステンションのインストール</h4>
+  <h4 class="no_toc">IDEの場合</h4>
   {{ notice-text1 | markdownify }}
 </div>
 
@@ -63,25 +64,22 @@ IDEからVimモードを使う場合は、エクステンションをインス�
 {% endcapture %}
 
 <div class="notice--warning">
-  <h4 class="no_toc">ホンモノのインストール</h4>
+  <h4 class="no_toc">ターミナルの場合</h4>
   {{ notice-text2 | markdownify }}
 </div>
 
 ### Vimを起動してみよう
 Vimがインストールできたら、早速起動してみましょう。
-起動方法はソフトウェアによって異なります。
 
-**IDEの場合**
+**IDEの場合:**
 エクステンションをインストールしたら、自動的にVimモードがオンになってるはずです。
 IDEの画面下に **--NORMAL--** みたいな表記があったら読み込み成功です。
-{% include figure image_path="https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/general-images/2024-01-28-vim-nyuumon-1/vim_on_vscode.png" alt="VSCode上のVim" %}
+{% include figure image_path="https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/general-images/2024-01-28-vim-nyuumon-1/vim_on_vscode.png" alt="VSCode上のVim" caption="VSCode上のVim" %}
 
-**ターミナルの場合**
+**ターミナルの場合:**
 Vimコマンドをインストールしたら、`vim <ファイル名>`でVimを起動できます。
-{% include figure image_path="https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/general-images/2024-01-28-vim-nyuumon-1/vanilla-vim.png" alt="バニラVim" %}
+{% include figure image_path="https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/general-images/2024-01-28-vim-nyuumon-1/vanilla-vim.png" alt="バニラVim" caption="バニラVim" %}
  
-
-
 ## このシリーズの構成
 このシリーズでは、Vimを下記の6種類に分けて一つずつ紹介していきます。
 - 4つのモードについて <- 今ココ
@@ -114,12 +112,16 @@ ___
 一つずつ見ていきましょう！
 
 ## インサートモード (Insert mode)
-文章を書くモードです。Vimを起動した後、`i`nsertの`i`を押すとこのモードに入ります。
+文章を書くモードです。
+{% include figure image_path="https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/general-images/2024-01-28-vim-nyuumon-1/vim_insertmode.gif" alt="Insert Mode" %}
+
+Vimを起動した後、`i`nsertの`i`を押すとこのモードに入ります。
 
 Wordみたいに、タイプした文字がそのまま表示されるようになります。 試しにいろいろ書いてみましょう!
 
 ## ノーマルモード
 カーソルを移動するときに使うモードです。実はこれデフォルトのモードで、Vim起動するとこのモードで始まります。
+{% include figure image_path="https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/general-images/2024-01-28-vim-nyuumon-1/vim_normalmode.gif" alt="Insert Mode" %}
 
 さっき`i`を押したのも、ノーマルモードからインサートモードに入るためです。
 
@@ -135,6 +137,7 @@ Vimを使いこなしたければ、矢印キーは捨てましょう。
 
 ## ビジュアルモード
 文章を選択するときに使うモードです。
+{% include figure image_path="https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/general-images/2024-01-28-vim-nyuumon-1/vim_visualmode.gif" alt="Insert Mode" %}
 
 ノーマルモードから`v`isualの`v`を押すとこのモードに入ります。
 
@@ -145,9 +148,11 @@ Vimを使いこなしたければ、矢印キーは捨てましょう。
 - 文章がハイライトされた状態で`d`を押すと、選択された文章を切り取ります。(`d`eleteの`d`)
 - 文章がハイライトされた状態で`y`を押すと、選択された文章をコピーします。(`y`ankの`y`)
 - 文章を切り取り・コピーした後に`p`を押すと、カーソルの位置に文章を貼り付けます。(`p`asteの`p`)
+{% include figure image_path="https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/general-images/2024-01-28-vim-nyuumon-1/vim_visual_copypaste.gif" alt="Insert Mode" %}
 
 ## コマンドモード
 ファイルの保存やVimの終了など、プログラムの操作に使うモードです。
+{% include figure image_path="https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/general-images/2024-01-28-vim-nyuumon-1/vim_write_quit.gif" alt="Insert Mode" %}
 
 ノーマルモードから`:`と押すとこのモードに移行し、画面下記に文字をタイプできるようになります。
 - ノーマルモードから`:w`と打つと、ファイルの保存を行います。(`w`riteの`w`)
