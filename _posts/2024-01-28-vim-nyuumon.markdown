@@ -1,6 +1,6 @@
 ---
 title:  "Vim入門① - 4つのモード"
-date:   2024-01-07 00:00:00 +1000
+date:   2024-01-28 00:00:00 +1000
 tags: Vim 日本語
 read_time: false
 comments: true
