@@ -1,14 +1,17 @@
 ---
-title:  "Shorten Frequent Commands with Alias"
-date:   2024-01-29 00:00:00 +1000
+title:  "Shorten Frequent Commands with Aliases"
+date:   2024-02-05 00:00:00 +1000
 tags: 
   - Linux
   - Shell Scripting
 comments: true
 classes: wide
-#header: 
-#  teaser: https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/teaser-images/gha-docker-cache.png
+header: 
+  teaser: https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/splash-images/linux_alias-1280.png
 ---
+
+![Linux Alias](https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/splash-images/linux_alias-1280.png)
+
 # Introduction
 When using Linux on the terminal, there are commands that we use frequently. 
 Most of them are short to type out, like `cd`, `ls` or `rm`. 
