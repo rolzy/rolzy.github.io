@@ -1,5 +1,5 @@
 ---
-title:  "Shorten Frequent Commands with Alias and Functions"
+title:  "Shorten Frequent Commands with Alias"
 date:   2024-01-29 00:00:00 +1000
 tags: 
   - Linux
@@ -18,7 +18,7 @@ typing it out because we run it so often. Or, you may have commands where you ad
 the same arguments every time to the point where you want that argument to be the 
 default.
 
-In this article I will explain `alias` and `function` in shell scripting. After you
+In this article I will explain what `alias` are in shell scripting. After you
 try this out, you will be able to save a lot of time from typing out commands!
 
 # Alias
@@ -66,23 +66,32 @@ Your `.rc` file will depend on the shell you are using.
 - If you're using bash, your .rc file will be `~/.bashrc`.
 - If you're using zsh, your .rc file will be `~/.zshrc`.
 
-## Limitations
-Aliases are good and all, but how about if we want to send it parameters?
-For example, say we defined the following alias:
+## Arguments
+You can also send arguments to aliases as well. For example, if you have 
 
 `alias la='ls -la'`
 
-and then we want to look in a particular directory. 
+already setup, you can then pass in arguments to the command! 
 
-# Functions
-<!-- 
-- Limitations
-    - Can't pass arguments
-    - Say we want to pass a string during runtime, but shorten the command itself
-- Functions
-    - I want to pass arguments to the commands
-    - What is an function
-    - Also set it in .rc file
-- Conclusion
-    - 
--->
+For example, `la test_dir` will be the equivalent to `ls -la test_dir`.
+
+With this in mind, I like to set some git related commands like these:
+
+```
+alias gd="git diff"
+alias ga="git add"
+alias gcm="git commit -m"
+```
+
+and then run a set of git commands like this:
+
+`git diff test.py` becomes `gd test.py`
+
+`git add -p test.py` becomes `ga -p test.py`
+
+`git diff --staged test.py` becomes `gd --staged test.py`
+
+`git commit -m "Make some changes to test.py"` becomes `gcm "Make some changes to test.py"`
+
+## Conclusion
+And thats it! If you have any aliases that you use, let us know in the comments :)
