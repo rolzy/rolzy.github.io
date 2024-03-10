@@ -15,14 +15,12 @@ I recently passed the [AWS Solution Architect - Associate](https://aws.amazon.co
 # How I Studied for the Exam
 I took two steps to study for the exam. 
 
-Firstly, I took a course offered by A Cloud Guru to learn about each and every AWS service covered by the course. I watched every lecture, did every lab and took notes from the classes. 
+Firstly, I took a course offered by A Cloud Guru to learn about each and every AWS service covered by the exam. I watched every lecture, did every lab and took notes from the classes. 
 
 Secondly, I did *a ton* of practice exams. I did the ones offered by A Cloud Guru, and any other free ones that I could find. I checked my answers against other users, and researched on the ones that I got wrong. 
 
-# Course
-I'll first go over my first step of my Solution Architect journey.
-
-For study materials, I took the [A Cloud Guru (ACG) AWS Certified Solution Architect Associate](https://learn.acloud.guru/course/certified-solutions-architect-associate/dashboard) course. This was the bulk of my study. I think it was an excellent course, it had just the right amount of theory and hands-on labs. The theory was taught in short videos which made the experience very engaging. The lectures also talk in this friendly and casual tone, which makes the classes fun as well. Any complex terminologies were explained in simple terminology. Overall, the course was very easy to follow.
+# First step - Taking an online course
+I took the [A Cloud Guru (ACG) AWS Certified Solution Architect Associate](https://learn.acloud.guru/course/certified-solutions-architect-associate/dashboard) course. This was the bulk of my study. I think it was an excellent course, it had just the right amount of theory and hands-on labs. The theory was taught in short videos which made the experience very engaging. The lectures also talk in this friendly and casual tone, which makes the classes fun as well. Any complex terminologies were explained in simple terminology. Overall, the course was very easy to follow.
 
 In the past, I've tried courses where the theory was taught purely in text, and it was so boring that I couldn't finish the course. ACG's course is the opposite. Its fun and engaging, which is exactly what you need when studying the vast world of AWS.
 
@@ -31,7 +29,7 @@ The hands-on labs in the courses were done in a small AWS environment where you 
 The labs are based on real-life scenarios, like "hosting a static website on a S3 bucket" or "setting up a VPC with an internet gateway". This gave me an idea as to how AWS services could and should be used. The instructions for the labs were clear, but not too clear as to give away the answers. They also had a "challenge mode" available for those who wanted to do the labs without instructions. 
 
 ### Study Topics
-If I were to take one thing from the ACG course, its how they divided the study materials up into service categories. I would recommend doing this even if you are not taking the ACG course. It helps when you are trying to get your head around the plethora of AWS services that is available today.
+The best thing about ACG's course is how the study material is divided into service categories. I would recommend doing this even if you are not taking the ACG course. It helps when you are trying to get your head around the plethora of AWS services that is available today.
 
 Here is how I would divide up the exam study:
 - **Automation**: Anything that automates your workflows on the Cloud. Things like EventBridge and Cloudformation
@@ -48,63 +46,24 @@ Here is how I would divide up the exam study:
 - **Security**: There are many services here. Security Groups, firewalls, Shield, Inspector, GuardDuty
 - **Storage**: Where you store data. S3, EFS, EBS
 
+# Second step - practice exams
+Once I finished the A Cloud Guru course, I moved on to practice exams. I did a ton of these.
 
-# Practice Exams
-Don't be afraid of looking at the answers! When studying, make an educated guess, compare to the answer, and make sure to understand why you're wrong if you are wrong. Going through a whole practice exam without knowing if you're correct or not is a waste of time. Its hard to go over each question one by one. Its better to get a feedback loop going at smaller intervals. 
+The first point I'd like to make is this: don't be afraid of looking at the answers! When studying for an exam, a lot of people try and avoid looking at the answers until they finish the whole exam. Some online practice exams are formatted like this as well. 
 
-There are quite a few trick questions in the exam. Make sure to extract key words when answering a question. Words like Serverelss, scale out, securely are keywords to look out for. Big hints are at the end of the question. Look out for phrases like Cost Effectively, Operational overhead, code changes etc. 
+When I study, I prefer to look at each question, make an educated guess and compare the answers before I move on to the next question. If I get a question wrong, I make sure to go over the materials and understand why I went wrong. This way, the thought process for the question is still fresh in my mind. If I'm reviewing answers at the very end of a 65-question exam, not only am I mentally exhausted, but I won't remember why I chose the wrong answers. I like to have small and frequent feedback loops for my studies. 
 
-Take your time to read the question - there is plenty of time in the exam. 
+Also, there are quite a few trick questions in the exam. To avoid getting tricked, make sure to extract key words when answering a question. In particular, big hints are at the end of the question, where it describes how they want to perform a job. For example, if the question ends with "most cost effectively", you will prioritize choices that are cheap, such as EC2 spot instances and serverless options. If the question is about migrating an on-prem monolithic application and it asks for the "least amount of code changes", you wouldn't try and redesign the whole application, but rather look at running the same code on an EC2 instance.
 
-During practice, when you get a question wrong, don't beat yourself too much. Even if you got tricked, as long as you had a reason for your answer, thats still important. 
-
-# Front-end, Back-end and everything in between
-A lot of emphasis on making software modular. How can the software be broken down? Think about front-end and back-end. Which services fit into front-end? Which services are for back-end? Which services sit in between and allow the two to communicate to each other? Which services support the project as a whole?
-
-Understanding the purpose that each service serves will also help you in understanding all the services. 
-
-# My pick of services to look out for
+### My pick of services to look out for
 Here are 5 services that AWS loves and tend to be an answer in the exam:
-- SQS omg if SQS is one of the choices, its probably the answer
-- CloudFront: It can do anything - deliver content worldwide, failover, cook your dinner, fix your broken marriage...
-- Lambda: Duh
-- VPC: Its what makes everything work together
-- DynamoDB: RDS is a bigger service, but the serverless DynamoDB is AWS's favourite database offering IMO
 
+5. DynamoDB - Its got all the buzzwords in it. NoSQL, infinitely scalable, it even has a serverless offering now too!
+4. VPC - This service is way too big. You need to learn some networking if you want to pass this exam.
+3. Lambda - Does this need an introduction? If you want to run code easily, use Lambda
+2. CloudFront - It's so much more than a content delivery service. It can do failover, serving content, edge computing, cook your dinner, fix your car.
+1. SQS - For some reason AWS loves this thing. If SQS is one of the choices, I can guarantee SQS is the answer for your question. At least in 2024.
+{: reversed="reversed"}
 
-<!-- 
-- Introduction
-    - I recently took the Associate Solution Architect exam
-    - Share my tips and tricks from my study
-- Study courses
-    - The A Cloud Guru course
-    - Good course! Up to date
-    - Video for each service (popular services have their own segment)
-        - Easy to segregate study 
-    - Each instructor have their own style, makes it more interesting
-- Study topics
-    - Divide to service categories
-    - Automation, Big Data, Compute, Cost Management, Databases, Decoupling, Management & Governance, Migration, Monitoring, Networking, Security, Storage 
-    - Divide and conqurer
-- Practice exams
-    - Looking at each question, make an educated guess, check against answer
-        - If you're wrong, study and understand why you're wrong
-    - Some questions are gotchas
-        - Extract key words
-            - Serverless, scale out seamlessly, securely...
-            - Especially the last few words
-            - Cost effectively, operational overhead, code changes, 
-        - Take your time to read the question. Plenty of time in exam
-        - Don't beat yourself too much
-- The frontend-backend construct
-    - A lot of emphasis on frontend, backend and segmentation
-    - Microservices and using queues
-    - The networking to put it all together
-- Services to look out for
-    - SQS
-    - CloudFront
-    - Lambda
-    - VPC
-    - DynamoDB
-- Make sure to study each course, even if you think you know it. The course is taught with the exam in mind so that perspective will shine a new light to the AWS service that you think you know.
--->
+### Conclusion
+That's a wrap! Study hard, prep hard and good luck with your AWS certification journey :)
