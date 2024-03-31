@@ -1,6 +1,6 @@
 ---
 title:  "Studying for the AWS Solution Architect Associate Exam"
-date:   2024-03-01 00:00:00 +1000
+date:   2024-03-14 00:00:00 +1000
 tags: 
   - AWS
   - Certifications
