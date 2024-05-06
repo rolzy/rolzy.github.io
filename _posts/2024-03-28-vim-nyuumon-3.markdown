@@ -13,7 +13,7 @@ toc: true
 {% capture notice-text1 %}
 この記事はVim入門シリーズの第3弾です。 初めての方は過去記事もどうぞ:
 - 第1弾: [Vimの4つのモード](https://www.rolzy.net/2024/01/28/vim-nyuumon.html)
-- 第2弾: [横方向の移動](https://www.rolzy.net/2024/01/28/vim-nyuumon.html)
+- 第2弾: [横方向の移動](https://www.rolzy.net/2024/02/28/vim-nyuumon-2.html)
 {% endcapture %}
 
 <div class="notice--info">
