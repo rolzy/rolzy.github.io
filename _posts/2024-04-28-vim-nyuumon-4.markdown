@@ -57,11 +57,13 @@ Vimは、これらの編集作業全般ができるノーマルモードがデ�
 - `yw` -> カーソル上の1単語をコピー
 - `y5w` -> カーソルから先の5単語までをコピー
 - `y$` -> カーソルから行末までコピー
+{% include figure image_path="https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/general-images/2024-04-30-vim-nyuumon-4/yhorizontal.gif" %}
 
 第三回で紹介した縦移動コマンドなら
 - `y2j` -> カーソルから下2行までをコピー
 - `y{` -> カーソル内の文節をコピー
 - `yG` -> カーソルからファイルの終わりまでコピー
+{% include figure image_path="https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/general-images/2024-04-30-vim-nyuumon-4/yvertical.gif" %}
 
 …と、移動コマンドと組み合わせることで広範囲の編集が簡単になります。
 
@@ -83,6 +85,7 @@ Vimは、これらの編集作業全般ができるノーマルモードがデ�
 - `yaw`でカーソル内の単語+周りのスペースをコピー
 
 …といった感じで、コマンドの間に`i`または`a`を入れることで使えます。
+{% include figure image_path="https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/general-images/2024-04-30-vim-nyuumon-4/textobjects.gif" %}
 
 コピーできる単位は`w`(単語),`(`(括弧),`"`(引用符),`{`(文節)などなど…
 
@@ -94,9 +97,10 @@ Vimは、これらの編集作業全般ができるノーマルモードがデ�
 選択範囲にある文章が削除され、即座にインサートモードに切り替わります。
 
 `y`と同じで、移動コマンドを使って選択範囲を指定します。
-- `c_` -> カーソルから行頭まで変更
+- `c0` -> カーソルから行頭まで変更
 - `c2k` -> カーソルから上2行までを変更
 - `ci(`でカーソルの括弧内の文章を変更
+{% include figure image_path="https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/general-images/2024-04-30-vim-nyuumon-4/change.gif" %}
 
 `c`で削除された元の文章はクリップボードにコピーされるので、`p`でペーストして復元できます。
 {: .notice--info}
@@ -108,6 +112,7 @@ Vimは、これらの編集作業全般ができるノーマルモードがデ�
 - `d4b` -> カーソルから前の四単語まで削除
 - `dgg` -> カーソルからファイルの先頭まで削除
 - `da"`でカーソルの引用符をまとめて削除
+{% include figure image_path="https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/general-images/2024-04-30-vim-nyuumon-4/delete.gif" %}
 
 # その他の編集コマンド
 ## 一文字編集コマンド
@@ -119,12 +124,22 @@ Vimは、これらの編集作業全般ができるノーマルモードがデ�
 `~`で文字の大文字小文字を入れ替えられます。
 範囲選択できるので、単語やカッコ内の文章の入れ替えもできます。
 
-<!--
-- OTHER NICHE OPERATORS
-    - One character ones
-        - x, s, r
-    - Tilde (caps)
-    - Search and replace
+## 単語の検索と置き換え
+第一回: Vimの4つのモードで紹介した**コマンドモード**を使って、単語の検索と置換ができます。
+具体的には、ノーマルモード中に`:s`と入力することでコマンドモードに移行し`sed`と同じことができるようになります。
 
+- `:s/before/after` -> カーソルがある行の一番初めに出てくる`before`を`after`に置き換え
+- `:s/before/after/g` -> カーソルがある行に出てくる全ての`before`を`after`に置き換え
+- `:1,5s/before/after/g` -> ファイルの1行目から5行目のすべての`before`を`after`に置き換え
+- `:%s/before/after` -> 全行の一番初めに出てくる`before`を`after`に置き換え
+- `:%s/before/after/g` -> ファイル内すべての`before`を`after`に置き換え
+- `:%s/before/after/gc` -> `c`(checkのc)を入れると、置き換える前に確認ができます。
+{% include figure image_path="https://rolzy-blog-assets.s3.ap-southeast-2.amazonaws.com/general-images/2024-04-30-vim-nyuumon-4/sed.gif" %}
 
--->
+ちなみに、ビジュアルモードで範囲を指定してから`:s`と入力すると選択範囲で`sed`できます。
+
+# おわりに
+今回は、Vimを使った文章の編集コマンドをいくつか紹介しました。
+特に`c` `y` `d`はVimの基本といってもいいコマンドで、よく使われます。
+
+前回の移動コマンドと合わせて、より早いVimライフをエンジョイしましょう！
